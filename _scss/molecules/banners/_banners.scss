@@ -1,0 +1,50 @@
+// ==========================================================================
+// BANNERS MODULE
+// ==========================================================================
+//
+// Banner styling
+//
+//
+// $imported-once-files: ();
+@import "../../imports";
+
+.banner {
+    background-image: image-url("bgs/banner.jpg");
+    background-repeat: no-repeat;
+    height: rem-calc(260);
+    background-size: rem-calc(460);
+    background-position: 22% bottom;
+    // background-attachment: fixed;
+
+    @include respond-to("xsmall and above") {
+        height: rem-calc(360);
+        background-size: rem-calc(630);
+    }
+
+    @include respond-to("small and above") {
+        height: rem-calc(420);
+        background-size: rem-calc(780);
+    }
+
+    @include respond-to("medium and above") {
+        background-size: rem-calc(900);
+        background-position: 40% top;
+    }
+
+    @include respond-to("large and above") {
+        background-size: rem-calc(1020);
+        background-position: 50% rem-calc(-40);
+        margin-left: rem-calc(75);
+        margin-right: rem-calc(75);
+    }
+
+    @include respond-to("xlarge only") {
+        max-width: rem-calc(1415);
+        background-size: rem-calc(1215);
+        background-position: 50% rem-calc(-140);
+        margin-left: auto;
+        margin-right: auto;
+        border-left: rem-calc(100) solid white;
+        border-right: rem-calc(100) solid white;
+    }
+}

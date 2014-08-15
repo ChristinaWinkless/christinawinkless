@@ -1,0 +1,44 @@
+// ==========================================================================
+// ISLANDS MODULE
+// ==========================================================================
+//
+// Backgrounds for block areas
+//
+//
+// $imported-once-files: ();
+@import "../../imports";
+
+// Dark background, therefore light text
+%island--inverse {
+    &, h1, h2, h3, h4,
+    p {
+        color: white;
+    }
+
+    blockquote p {
+        color: inherit;
+    }
+
+    a {
+        &,
+        &:link {
+            color: white;
+            border-bottom: 1px solid transparentize(white, 0.7);
+        }
+
+        &:hover,
+        &:focus {
+            color: palette(pink);
+            border-bottom: 1px solid transparentize(palette(pink), 0.5);
+        }
+    }
+}
+
+
+// Colours
+// ==========================================================================
+
+.island--dark-grey {
+    @extend %island--inverse;
+    background-color: palette(grey, dark);
+}

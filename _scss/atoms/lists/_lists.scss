@@ -1,0 +1,39 @@
+// ==========================================================================
+// LISTS MODULE
+// ==========================================================================
+//
+// Styling for list types
+//
+//
+// $imported-once-files: ();
+@import "../../imports";
+
+.list--block {
+
+    > li {
+        border-top: 1px solid palette(grey, light);
+        margin: 0;
+        padding: rem-calc(20 0 25);
+    }
+
+    &:first-of-type li:first-child {
+        border-top: 0;
+    }
+
+    @include respond-to("medium and above") {
+
+        li:first-child {
+            border-top: 0;
+        }
+        
+    }
+
+}
+
+
+.list--inline {
+    > li {
+        display: inline;
+        margin: rem-calc(0 0 0 10);
+    }
+}

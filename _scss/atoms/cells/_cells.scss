@@ -1,0 +1,56 @@
+// ==========================================================================
+// CELL MODULE
+// ==========================================================================
+//
+// Vertical spacing helper classes
+// Use bottom margin only
+//
+//
+// $imported-once-files: ();
+@import "../../imports";
+
+$cells: (
+    "base": (
+        sizes: (50)
+    ),
+    "small": (
+        sizes: (10, 20, 30),
+        breakpoint: 'small and above'
+    ),
+    "medium": (
+        sizes: (75),
+        breakpoint: 'medium and above'
+    ),
+    "large": (
+        sizes: (10, 20, 30),
+        breakpoint: 'large and above'
+    )
+);
+
+@mixin _cells_respond-to($breakpoint:false) {
+    @if $breakpoint {
+        @include respond-to($breakpoint) {
+            @content;
+        }
+    }
+    @else {
+        @content;
+    }
+}
+
+
+@each $group, $config in $cells {
+    $breakpoint:        map-get($config, breakpoint);
+    $group-name:        if($group == 'base', '', '--#{$group}');
+    $sizes:             map-get($config, sizes);
+
+    @include _cells_respond-to($breakpoint) {
+
+        @each $size in $sizes {
+            .cell--#{$size}#{$group-name} {
+                margin-bottom: rem-calc($size);
+            }
+        }
+
+    }
+}

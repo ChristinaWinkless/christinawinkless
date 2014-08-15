@@ -1,0 +1,19 @@
+// ==========================================================================
+// PROJECTS MODULE
+// ==========================================================================
+//
+// Project item styling
+//
+//
+// $imported-once-files: ();
+@import "../../imports";
+
+.project {
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(10);
+}
+
+.project__image {
+    margin-bottom: rem-calc(20);
+    width: 100%;
+}

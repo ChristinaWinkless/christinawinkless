@@ -1,0 +1,235 @@
+// ==========================================================================
+// QUARKS
+// ==========================================================================
+//
+// This module is the equivalent of a branded CSS reset, and contains all of
+// the defaults HTML elements for this project only.
+//
+//
+// CONTENTS
+// 1.  Import global config
+// 2.  Import global tools
+// 3.  HTML and BODY
+// 4.  Default spacing
+// 5.  Headings
+// 6.  Paragraphs
+// 7.  Links
+// 8.  Images
+// 9.  Figures
+// 10. Misc
+//
+
+// $imported-once-files: ();
+@import "../imports";
+
+
+
+
+// HTML & BODY
+// ==========================================================================
+//
+// 1. Border-box fix.
+// 2. html styles.
+// 3. body styles.
+//
+
+* {
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: ($font-base-size * 1px); // set the base font size for REM values.
+    height: 100%;
+    min-width: 300px;
+}
+
+body {
+    @include font-family(meta-serif-pro);
+    @include font-scale(base);
+    color: palette(grey, dark);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+    background-color: palette(pink);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: palette(pink);
+    color: white;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+// DEFAULT SPACING
+// ==========================================================================
+//
+// By default we’ll give all elements the base-spacing-unit in order to keep
+// everything a bit more DRY.
+//
+// As per: csswizardry.com/2012/06/single-direction-margin-declarations
+//
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+p, blockquote,
+fieldset,
+figure, pre,
+object {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+// PARAGRAPHS
+// ==========================================================================
+
+.bold,
+b,
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+
+    // em tags within em tags should not be italicised.
+    em &,
+    blockquote & {
+        font-style: normal;
+    }
+}
+
+
+
+
+// LINKS
+// ==========================================================================
+
+a {
+    &,
+    &:link {
+        color: palette(grey, dark);
+        text-decoration: none;
+        border-bottom: 1px solid transparentize(palette(grey, dark), 0.5);
+        font-weight: 500;
+    }
+
+    &:hover,
+    &:focus {
+        color: palette(pink);
+        border-bottom: 1px solid transparentize(palette(pink), 0.5);
+    }
+}
+
+
+// IMAGES
+// ==========================================================================
+
+img, object {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+// FIGURES
+// ==========================================================================
+
+figcaption,
+.figcaption {
+    display: block;
+    @include font-family(meta-serif-pro);
+    @include font-scale(base);
+    margin-top: rem-calc(5);
+    color: palette(grey, dark);
+}
+
+
+
+// QUOTES
+// ==========================================================================
+
+q {
+    quotes: "“" "”";
+
+    &:before { content: open-quote; }
+    &:after { content: close-quote; }
+}
+
+blockquote {
+    @include font-family(meta-serif-pro);
+    @include font-scale(base);
+    color: palette(grey, dark);
+    text-align: center;
+    padding-bottom: rem-calc(20);
+
+    @include respond-to("large and above") {
+        @include font-scale(base);
+    }
+
+    cite {
+        color: palette(grey, dark);
+        @include font-family(meta-serif-pro);
+        @include font-scale(base);
+        font-weight: 900;
+    }
+
+    // Only paragraphs should be italicised
+    & > p {
+        quotes: "“" "”";
+        &:before { content: open-quote; }
+        &:after { content: close-quote; }
+        font-style: italic;
+    }
+
+    // The last child or only child needs a slightly smaller margin
+    p:last-of-type,
+    p:only-child {
+        padding-bottom: 0;
+    }
+}
+
+
+// LISTS
+// ==========================================================================
+
+ul,
+ol {
+    li {
+        margin-bottom: rem-calc($base-unit * 2);
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+
+// MISC
+// ==========================================================================
+
+hr {
+    border: none;
+    border-top: 1px solid palette(grey, dark);
+    width: rem-calc(40);
+    margin: rem-calc(30) auto rem-calc(40);
+
+}

@@ -1,0 +1,37 @@
+// ==========================================================================
+// HEADINGS MODULE
+// ==========================================================================
+//
+// Style for headings
+//
+//
+// $imported-once-files: ();
+@import "../../imports";
+
+h1, .h1 {
+    @include font-scale(mid-large);
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: rem-calc(8);
+
+    @include respond-to("xsmall and above") {
+        @include font-scale(large);
+        padding-bottom: rem-calc(18);
+    }
+
+    @include respond-to("medium and above") {
+        @include font-scale(x-large);
+    }
+}
+
+h2, .h2 {
+    @include font-scale(mid);
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: rem-calc(30);
+}
+
+h3, .h3 {
+    font-weight: bold;
+    padding-bottom: rem-calc(10);
+}

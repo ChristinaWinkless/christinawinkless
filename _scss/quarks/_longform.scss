@@ -1,0 +1,36 @@
+// ==========================================================================
+// LONGFORM-TXT MODULE
+// ==========================================================================
+//
+// This module styles the editor container for longform txt. Since this content
+// will be added in the markdown format it’s necessary to overwrite the
+// default quark styles specifically for longer reading.
+//
+//
+// CONTENTS
+// 1. Default variables, functions and mixins.
+// 2. Module styles.
+// 3. Import modifiers.
+// $imported-once-files: ();
+@import "../imports";
+
+// DEFAULT VARIABLES AND OPTIONS FOR THIS MODULE
+// ==========================================================================
+// Import all of the scaffolding includes that don’t generate styles
+
+// @import 'includes/module-scaffold';
+
+
+
+// MODULE STYLES
+// ==========================================================================
+
+.longform {
+
+    p {
+        @include font-family(meta-serif-pro);
+        @include font-scale(base);
+    }
+
+
+}

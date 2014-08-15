@@ -1,0 +1,35 @@
+// ==========================================================================
+// SOCIAL MODULE
+// ==========================================================================
+//
+// Social links styling
+//
+//
+// $imported-once-files: ();
+@import "../../imports";
+
+.social {
+    width: auto;
+    float: right;
+}
+
+.social__icon {
+    @include text-replace;
+    width: rem-calc(30);
+    height: rem-calc(30);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &, &:link {
+        border: none;
+    }
+}
+
+$icons: twitter, linkedin;
+
+@each $icon in $icons {
+    .social__icon--#{$icon} {
+        @extend .social__icon;
+        @include retina-image(icons, icon--#{$icon});
+    }
+}

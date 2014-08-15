@@ -1,0 +1,23 @@
+// ==========================================================================
+// PARAGRAPHS MODULE
+// ==========================================================================
+//
+// Style for paragraphs
+//
+//
+// $imported-once-files: ();
+@import "../../imports";
+
+p {
+    margin-bottom: rem-calc(20);
+}
+
+
+
+.p--center {
+    text-align: center;
+}
+
+.p--small {
+    @include font-scale(small);
+}

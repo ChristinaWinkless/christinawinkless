@@ -1,0 +1,53 @@
+// ==========================================================================
+// STATE MODULE
+// ==========================================================================
+//
+// This module sets states for elements, including at different screen sizes
+//
+@import "../imports";
+
+
+
+// MODULE STYLES
+// ==========================================================================
+
+.is-hidden {
+    display: none;
+}
+
+.is-visible {
+    display: block;
+}
+
+
+
+$_breakpoints: (
+    "xsmall": (
+        breakpoint: "xsmall and above"
+    ),
+    "small": (
+        breakpoint: "small and above"
+    ),
+    "medium": (
+        breakpoint: "medium and above"
+    ),
+    "large": (
+        breakpoint: "large and above"
+    ),
+    "xlarge": (
+        breakpoint: "xlarge only"
+    )
+);
+
+
+@each $group, $config in $_breakpoints {
+
+    @include respond-to(map-get($config, breakpoint)) {
+        .is-hidden--#{$group} {
+            display: none;
+        }
+        .is-visible--#{$group} {
+            display: block;
+        }
+    }
+}

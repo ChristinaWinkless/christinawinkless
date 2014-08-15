@@ -1,0 +1,49 @@
+// ==========================================================================
+// WRAPPER
+// ==========================================================================
+//
+// Sets the default max-width of the page : encapsulates the grid
+//
+// EXAMPLE
+//
+//
+//
+
+// $imported-once-files: ();
+@import "../../imports";
+
+
+.wrapper {
+    display: block;
+    width: 100%;
+    max-width: rem-calc(1415);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: rem-calc(15);
+    padding-right: rem-calc(15);
+
+    @include respond-to("xsmall and above") {
+        padding-left: rem-calc(20);
+        padding-right: rem-calc(20);
+    }
+
+    @include respond-to("small and above") {
+        padding-left: rem-calc(40);
+        padding-right: rem-calc(40);
+    }
+
+    @include respond-to("medium and above") {
+        padding-left: rem-calc(100);
+        padding-right: rem-calc(100);
+    }
+
+    @include respond-to("large and above") {
+        padding-left: rem-calc(75);
+        padding-right: rem-calc(75);
+    }
+
+    @include respond-to("xlarge only") {
+        padding-left: rem-calc(100);
+        padding-right: rem-calc(100);
+    }
+}

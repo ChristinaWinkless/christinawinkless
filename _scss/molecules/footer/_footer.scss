@@ -1,0 +1,67 @@
+// ==========================================================================
+// FOOTER MODULE
+// ==========================================================================
+//
+// Footer styling
+//
+//
+// $imported-once-files: ();
+@import "../../imports";
+
+.footer {
+    margin-top: rem-calc(80);
+}
+
+.footer__contact {
+    position: relative;
+    padding: rem-calc(110 0 60);
+    margin-bottom: rem-calc(25);
+
+    p {
+        text-align: center;
+        max-width: rem-calc(340);
+        margin: 0 auto;
+
+        a {
+            white-space: nowrap;
+        }
+    }
+}
+
+.footer__toplink {
+    @include font-scale(small);
+    position: absolute;
+    z-index: 1;
+    top: rem-calc(-40);
+    right: rem-calc(10);
+    font-weight: normal;
+}
+
+a.footer__toplink,
+a.footer__toplink:link {
+    color: palette(grey, dark);
+    border-bottom: 1px solid transparentize(palette(grey, dark), 0.5);
+}
+
+a.footer__toplink:hover,
+a.footer__toplink:focus {
+    color: palette(pink);
+    border-bottom: 1px solid transparentize(palette(pink), 0.5);
+}
+
+.footer__avatar {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: rem-calc(-64);
+    margin-left: rem-calc(-74);
+    width: rem-calc(128);
+    height: rem-calc(128);
+    @include border-radius(rem-calc(64));
+
+}
+
+.footer__copyright {
+    color: palette(grey);
+    margin-top: rem-calc(5);
+}

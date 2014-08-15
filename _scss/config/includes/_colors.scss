@@ -1,0 +1,22 @@
+// ==========================================================================
+// COLOR VARIABLES
+// ==========================================================================
+//
+// Global color variables which can then be used by tools such as _palette.scss
+// which will iterate over this list and creat the right color values without
+// having to add magic color values like #333335.
+//
+@import '../../tools/import-once';
+@if import-once('colors') {
+$palettes: (
+    pink: (
+        base: #F16162
+    ),
+    grey: (
+        light: #DDDDDD,
+        base: #777777,
+        dark: #1C1C1C
+    )
+)!global;
+
+}

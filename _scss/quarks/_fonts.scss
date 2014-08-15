@@ -1,0 +1,85 @@
+// ==========================================================================
+// FONTS
+// ==========================================================================
+//
+//
+// This module loads self-hosted webfonts
+//
+//
+
+@font-face {
+    font-family: 'meta_serif';
+    src: url('/static/fonts/metaserifpro-boldita-webfont.eot');
+    src: url('/static/fonts/metaserifpro-boldita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/metaserifpro-boldita-webfont.woff') format('woff'),
+         url('/static/fonts/metaserifpro-boldita-webfont.ttf') format('truetype'),
+         url('/static/fonts/metaserifpro-boldita-webfont.svg#meta_serif_probold_italic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'meta_serif';
+    src: url('/static/fonts/metaserifpro-bookita-webfont.eot');
+    src: url('/static/fonts/metaserifpro-bookita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/metaserifpro-bookita-webfont.woff') format('woff'),
+         url('/static/fonts/metaserifpro-bookita-webfont.ttf') format('truetype'),
+         url('/static/fonts/metaserifpro-bookita-webfont.svg#meta_serif_probook_italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'meta_serif';
+    src: url('/static/fonts/metaserifpro-book-webfont.eot');
+    src: url('/static/fonts/metaserifpro-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/metaserifpro-book-webfont.woff') format('woff'),
+         url('/static/fonts/metaserifpro-book-webfont.ttf') format('truetype'),
+         url('/static/fonts/metaserifpro-book-webfont.svg#meta_serif_probook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'meta_serif';
+    src: url('/static/fonts/metaserifpro-bold-webfont.eot');
+    src: url('/static/fonts/metaserifpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/metaserifpro-bold-webfont.woff') format('woff'),
+         url('/static/fonts/metaserifpro-bold-webfont.ttf') format('truetype'),
+         url('/static/fonts/metaserifpro-bold-webfont.svg#meta_serif_probold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'meta_serif';
+    src: url('/static/fonts/metaserifpro-mediita-webfont.eot');
+    src: url('/static/fonts/metaserifpro-mediita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/metaserifpro-mediita-webfont.woff') format('woff'),
+         url('/static/fonts/metaserifpro-mediita-webfont.ttf') format('truetype'),
+         url('/static/fonts/metaserifpro-mediita-webfont.svg#meta_serif_promedium_italic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'meta_serif';
+    src: url('/static/fonts/metaserifpro-medi-webfont.eot');
+    src: url('/static/fonts/metaserifpro-medi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/metaserifpro-medi-webfont.woff') format('woff'),
+         url('/static/fonts/metaserifpro-medi-webfont.ttf') format('truetype'),
+         url('/static/fonts/metaserifpro-medi-webfont.svg#meta_serif_promedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+
+}
