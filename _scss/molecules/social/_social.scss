@@ -28,8 +28,12 @@
 $icons: twitter, linkedin;
 
 @each $icon in $icons {
-    .social__icon--#{$icon} {
+.social__icon--#{$icon} {
         @extend .social__icon;
         @include retina-image(icons, icon--#{$icon});
+
+        &:hover, &:focus {
+            @include retina-image(icons, icon--#{$icon}--hover);
+        }
     }
 }

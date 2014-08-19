@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         concat: {   
             dist: {
                 src: [
-                    // 'static/js/lib/google.analytics.js',
+                    'static/js/lib/google.analytics.js',
                     ],
                 dest: 'static/js/build/app.js',
             }
@@ -31,15 +31,7 @@ module.exports = function(grunt) {
                     cssDir: 'static/style',
                     imagesDir: 'static/images',
                     environment: 'production',
-                    outputStyle: 'compressed'
-                }
-            },
-            dev: {
-                options: {
-                    sassDir: '_scss',
-                    cssDir: 'static/style',
-                    imagesDir: 'static/images',
-                    outputStyle: 'compressed'
+                    outputStyle: 'expanded'
                 }
             }
         },
