@@ -1,6 +1,7 @@
 .gem
 _scss
 .sass-cache
+.gem
 node_modules
 Gemfile
 Gemfile.lock
