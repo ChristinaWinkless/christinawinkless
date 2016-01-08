@@ -1,4 +1,5 @@
 .sass-cache
+.gem
 node_modules
 static/style/*
 static/js/build/*
