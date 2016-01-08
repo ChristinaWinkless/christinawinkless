@@ -1,5 +1,10 @@
+.gem
+_scss
 .sass-cache
 node_modules
-static/style/*
-static/js/build/*
+Gemfile
 Gemfile.lock
+config.rb
+package.json
+README.md
+Gruntfile.js
